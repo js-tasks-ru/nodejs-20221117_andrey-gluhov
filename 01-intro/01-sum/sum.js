@@ -1,6 +1,7 @@
 function sum(a, b) {
-  if ( typeof( a ) != "number"  ||  typeof( b ) != "number" )
-    throw new TypeError( "Параметры фцнкции sum дожны быть числами", "sum.js" );
+  if ([a, b].some((value) => typeof value !== 'number')) {
+    throw new TypeError();
+  }
   return a + b;
 }
 
