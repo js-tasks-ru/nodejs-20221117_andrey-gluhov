@@ -15,13 +15,13 @@ describe('streams/file-server-post', () => {
     });
 
     after((done) => {
-      fse.emptyDirSync(filesFolder);
-      fse.writeFileSync(path.join(filesFolder, '.gitkeep'), '');
+        fse.emptyDirSync(filesFolder);
+        fse.writeFileSync(path.join(filesFolder, '.gitkeep'), '');
       server.close(done);
     });
 
     beforeEach(() => {
-      fse.emptyDirSync(filesFolder);
+        fse.emptyDirSync(filesFolder);
     });
 
     describe('POST', () => {
